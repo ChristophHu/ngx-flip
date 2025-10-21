@@ -1,0 +1,468 @@
+.flip-pane-2 
+  width: 100% //146px
+  height: 100% //146px
+  // margin: 6px 0 0 330px
+  z-index: 2
+
+.flip-pane-2 .flip 
+  width: 100% //146px
+  height: 100% //146px
+
+.flip-pane-2 div 
+  height: calc(50% - 2px) //72px
+
+.flip-up 
+  -webkit-transform-origin: 50% 100%
+  -moz-transform-origin: 50% 100%
+  -o-transform-origin: 50% 100%
+  -ms-transform-origin: 50% 100%
+  transform-origin: 50% 100%
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  -ms-backface-visibility: hidden
+  backface-visibility: hidden
+  top: 0
+
+.flip-down 
+  -webkit-transform-origin: 50% 0%
+  -moz-transform-origin: 50% 0%
+  -o-transform-origin: 50% 0%
+  -ms-transform-origin: 50% 0%
+  transform-origin: 50% 0%
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  -ms-backface-visibility: hidden
+  backface-visibility: hidden
+  bottom: 0
+
+.flip-pane-2 .flip-text 
+  position: absolute
+  left: 0
+  z-index: 1
+  width: 100%
+  height: 200%
+  font-weight: 700
+
+#flipclock .before 
+  z-index: 3
+
+#flipclock .active 
+  -webkit-animation: flip-ani-index 0.5s 0.5s linear both
+  -moz-animation: flip-ani-index 0.5s 0.5s linear both
+  -o-animation: flip-ani-index 0.5s 0.5s linear both
+  -ms-animation: flip-ani-index 0.5s 0.5s linear both
+  animation: flip-ani-index 0.5s 0.5s linear both
+  z-index: 2
+
+#flipclock .active .flip-down 
+  z-index: 2
+  -webkit-animation: flip-ani-up 0.5s 0.5s linear both
+  -moz-animation: flip-ani-up 0.5s 0.5s linear both
+  -o-animation: flip-ani-up 0.5s 0.5s linear both
+  -ms-animation: flip-ani-up 0.5s 0.5s linear both
+  animation: flip-ani-up 0.5s 0.5s linear both
+
+#flipclock .before .flip-up 
+  z-index: 2
+  -webkit-animation: flip-ani-down 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both
+  -moz-animation: flip-ani-down 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both
+  -o-animation: flip-ani-down 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both
+  -ms-animation: flip-ani-down 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both
+  animation: flip-ani-down 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both
+
+#flipclock .before .flip-up .flip-shadow 
+  -webkit-animation: show 0.5s linear both
+  -moz-animation: show 0.5s linear both
+  -o-animation: show 0.5s linear both
+  -ms-animation: show 0.5s linear both
+  animation: show 0.5s linear both
+
+#flipclock .before .flip-down .flip-shadow 
+  -webkit-animation: show 0.5s linear both
+  -moz-animation: show 0.5s linear both
+  -o-animation: show 0.5s linear both
+  -ms-animation: show 0.5s linear both
+  animation: show 0.5s linear both
+
+#flipclock .active .flip-up .flip-shadow 
+  -webkit-animation: hide 0.5s 0.3s linear both
+  -moz-animation: hide 0.5s 0.3s linear both
+  -o-animation: hide 0.5s 0.3s linear both
+  -ms-animation: hide 0.5s 0.3s linear both
+  animation: hide 0.5s 0.3s linear both
+
+#flipclock .active .flip-down .flip-shadow 
+  -webkit-animation: hide 0.5s 0.3s linear both
+  -moz-animation: hide 0.5s 0.3s linear both
+  -o-animation: hide 0.5s 0.3s linear both
+  -ms-animation: hide 0.5s 0.3s linear both
+  animation: hide 0.5s 0.3s linear both
+
+@-moz-keyframes flip-ani-index 
+  0% 
+    z-index: 2
+
+  5% 
+    z-index: 4
+
+  100% 
+    z-index: 4
+  
+
+@-webkit-keyframes flip-ani-index 
+  0% 
+    z-index: 2
+
+  5% 
+    z-index: 4
+
+  100% 
+    z-index: 4
+
+@-o-keyframes flip-ani-index 
+  0% 
+    z-index: 2
+
+  5% 
+    z-index: 4
+
+  100% 
+    z-index: 4
+
+@-ms-keyframes flip-ani-index 
+  0% 
+    z-index: 2
+  5% 
+    z-index: 4
+  100% 
+    z-index: 4
+
+@keyframes flip-ani-index 
+  0% 
+    z-index: 2
+  5% 
+    z-index: 4
+  100% 
+    z-index: 4
+  
+
+@-moz-keyframes flip-ani-up 
+  0% 
+    -webkit-transform: rotateX(90deg)
+    -moz-transform: rotateX(90deg)
+    -o-transform: rotateX(90deg)
+    -ms-transform: rotateX(90deg)
+    transform: rotateX(90deg)
+  60% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+  100% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+
+@-webkit-keyframes flip-ani-up 
+  0% 
+    -webkit-transform: rotateX(90deg)
+    -moz-transform: rotateX(90deg)
+    -o-transform: rotateX(90deg)
+    -ms-transform: rotateX(90deg)
+    transform: rotateX(90deg)
+  60% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+  100% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+  
+@-o-keyframes flip-ani-up 
+  0% 
+    -webkit-transform: rotateX(90deg)
+    -moz-transform: rotateX(90deg)
+    -o-transform: rotateX(90deg)
+    -ms-transform: rotateX(90deg)
+    transform: rotateX(90deg)
+  60% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+  100% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+  
+@-ms-keyframes flip-ani-up 
+  0% 
+    -webkit-transform: rotateX(90deg)
+    -moz-transform: rotateX(90deg)
+    -o-transform: rotateX(90deg)
+    -ms-transform: rotateX(90deg)
+    transform: rotateX(90deg)
+  60% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+  100% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+
+@keyframes flip-ani-up 
+  0% 
+    -webkit-transform: rotateX(90deg)
+    -moz-transform: rotateX(90deg)
+    -o-transform: rotateX(90deg)
+    -ms-transform: rotateX(90deg)
+    transform: rotateX(90deg)
+  60% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+  100% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+
+@-moz-keyframes flip-ani-down 
+  0% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  99% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    -webkit-transform: rotateX(-90deg)
+    -moz-transform: rotateX(-90deg)
+    -o-transform: rotateX(-90deg)
+    -ms-transform: rotateX(-90deg)
+    transform: rotateX(-90deg)
+
+@-webkit-keyframes flip-ani-down 
+  0% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  99% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    -webkit-transform: rotateX(-90deg)
+    -moz-transform: rotateX(-90deg)
+    -o-transform: rotateX(-90deg)
+    -ms-transform: rotateX(-90deg)
+    transform: rotateX(-90deg)
+
+@-o-keyframes flip-ani-down 
+  0% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  99% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    -webkit-transform: rotateX(-90deg)
+    -moz-transform: rotateX(-90deg)
+    -o-transform: rotateX(-90deg)
+    -ms-transform: rotateX(-90deg)
+    transform: rotateX(-90deg)
+
+@-ms-keyframes flip-ani-down 
+  0% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  99% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    -webkit-transform: rotateX(-90deg)
+    -moz-transform: rotateX(-90deg)
+    -o-transform: rotateX(-90deg)
+    -ms-transform: rotateX(-90deg)
+    transform: rotateX(-90deg)
+
+@keyframes flip-ani-down 
+  0% 
+    -webkit-transform: rotateX(0deg)
+    -moz-transform: rotateX(0deg)
+    -o-transform: rotateX(0deg)
+    -ms-transform: rotateX(0deg)
+    transform: rotateX(0deg)
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  99% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    -webkit-transform: rotateX(-90deg)
+    -moz-transform: rotateX(-90deg)
+    -o-transform: rotateX(-90deg)
+    -ms-transform: rotateX(-90deg)
+    transform: rotateX(-90deg)
+
+@-moz-keyframes show 
+  0% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  100% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  
+
+@-webkit-keyframes show 
+  0% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  100% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+
+@-o-keyframes show 
+  0% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  100% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  
+@-ms-keyframes show 
+  0% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  100% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  
+@keyframes show 
+  0% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  100% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  
+@-moz-keyframes hide 
+  0% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  
+@-webkit-keyframes hide 
+  0% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  
+@-o-keyframes hide 
+  0% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  
+@-ms-keyframes hide 
+  0% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  
+@keyframes hide 
+  0% 
+    opacity: 1
+    -ms-filter: none
+    filter: none
+  100% 
+    opacity: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"

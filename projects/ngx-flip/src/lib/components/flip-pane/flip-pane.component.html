@@ -1,0 +1,24 @@
+<div id="flipclock" class="flip-pane flip-pane-2 flip-shadow">
+    <ul #flipElement class="flip-second h-full w-full relative float-left text-stone-300">
+        <li class="before absolute top-0 left-0 h-full w-full z-20">
+            <span class="block h-full perspective-[750px]">
+                <div class="flip-up absolute inset-0 bottom-[50%] h-[50%] z-10 overflow-hidden">
+                    <div class="flip-text absolute top-0 left-0 w-full h-[200%] bg-gradient-to-b from-tertiary to-primary text-center rounded-2xl z-10" [ngStyle]="{ 'font-size': textSize, 'line-height': lineHeight }">00</div>
+                </div>
+                <div class="flip-down absolute inset-0 top-[50%] h-[50%] z-10 overflow-hidden">
+                    <div class="flip-text absolute bottom-0 left-0 w-full h-[200%] bg-gradient-to-b from-tertiary to-primary text-center rounded-2xl z-10" [ngStyle]="{ 'font-size': textSize, 'line-height': lineHeight }">00</div>
+                </div>
+            </span>
+        </li>
+        <li class="active absolute top-0 left-0 h-full w-full z-10">
+            <span class="block h-full perspective-[750px]">
+                <div class="flip-up absolute inset-0 bottom-[50%] h-[50%] z-10 overflow-hidden">
+                    <div class="flip-text absolute top-0 left-0 w-full h-[200%] bg-gradient-to-b from-tertiary to-primary text-center rounded-2xl z-10" [ngStyle]="{ 'font-size': textSize, 'line-height': lineHeight }">00</div>
+                </div>
+                <div class="flip-down absolute inset-0 top-[50%] h-[50%] z-10 overflow-hidden">
+                    <div class="flip-text absolute bottom-0 left-0 w-full h-[200%] bg-gradient-to-b from-tertiary to-primary text-center rounded-2xl z-10" [ngStyle]="{ 'font-size': textSize, 'line-height': lineHeight }">00</div>
+                </div>
+            </span>
+        </li>
+    </ul>
+</div>
